@@ -1,0 +1,103 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;	height: 2500px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+:root {
+	--mainColor: #852cf6;
+	--mealHeaderSize: 60px;
+	--meals-desc-title-width: 180px;
+}
+
+.main-navigation {
+	position: relative;
+}
+.main-navigation .navbar-inverse {
+	background-color: #852cf6 !important;
+	border-color: #852cf6;
+}
+.main-navigation .navbar-inverse .navbar-brand {
+	color: #852cf6;
+	color: #fff;
+	font-weight: normal;
+}
+.main-navigation .right-links ul a {
+	color: #fff !important;
+	font-weight: normal;
+}
+
+/* Start of meals banner */
+.meals_banner {
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+/* .meals_banner img{
+    margin-bottom: 20px;
+} */
+.meals_banner h1 {
+	font-size: var(--mealHeaderSize);
+	margin-bottom: 10px;
+	color: var(--mainColor);
+}
+/* End of meals banner */
+
+/* Start of meals-list */
+.meals-list {
+	position: relative;
+}
+ 
+
+.meals-list .left-img img {
+    width: 100%;
+    /* height: 350px !important; */
+	height: auto;
+   
+}
+.meals-list  .well {
+    /* height: 350px !important; */
+	height: auto;
+    
+}
+.meals-list .meals-des {
+	/* width: var(--meals-desc-title-width); */
+	/* background-color: var(--mainColor); */
+	color: var(--mainColor);
+	padding: 8px 0px;
+}
+/* End of meals-list */
+
+/* Start of list of avaialable drinks */
+.drinks-list {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.drinks-list h1 {
+	font-size: var(--mealHeaderSize);
+	margin-bottom: 10px;
+	color: var(--mainColor);
+}
+.drinks-list h3.drink-des {
+	width: var(--meals-desc-title-width);
+	background-color: var(--mainColor);
+	color: #fff;
+	padding: 8px 0px;
+}
+/* End of list of avaialable drinks */

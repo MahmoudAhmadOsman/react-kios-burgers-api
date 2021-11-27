@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 import Product from '../components/Product'
-import loading from '../components/Loading'
+import Loading from '../components/Loading';
+import MessageBox from '../components/MessageBox'
 
 const HomeScreen = () => {
+    const [loading, error, products] = useState({});
 
-    const [loading, error, produtcs] = useState({});
     return (
-        <section className="home-product">
-            {
-                loading ?(
-                     <div className="loading">
-                    <Loading />
-                </div> ): error ? (<div>
-                    <Product products={products}></Product>
-                </div>
-                )
-            }
-            
-        </section>
-    )
+		<div>
+			{loading ? (
+				<Loading></Loading>
+			) : error ? (
+				<MessageBox variant="danger text-center">{error}</MessageBox>
+			) : (
+				<>
+					<Product products={products}></Product> 
+				</>
+			)}
+		</div>
+	);
 }
 
 export default HomeScreen

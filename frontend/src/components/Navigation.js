@@ -1,9 +1,8 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Navigation = () => {
     return (
-        //   Start of navigation  
-        <section className="main-navigation">
+           <section className="main-navigation">
             <nav className="navbar navbar-inverse navbar-fixed-top">
                 <div className="container">
                     <div className="navbar-header">
@@ -33,7 +32,9 @@ const Navigation = () => {
                 </div>
             </nav>
         </section>
-        //  End of navigation  
+       
+       
+        
     )
 }
 

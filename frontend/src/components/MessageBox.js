@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MessageBox = () => {
+const MessageBox = (props) => {
     return (
         <section className={`alert alert-${props.variant || "danger"}`}>
         {/* Show the content of the message */}

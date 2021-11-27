@@ -25,7 +25,7 @@ const Product = ({props}) => {
         <div className="container">
             <h1>{mealsList}</h1><hr /> <br />
             <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-8">
                     <img src="https://source.unsplash.com/1500x500/?hamburger" className="img-responsive"
                         alt="meals banner image" />
                 </div>
@@ -52,14 +52,15 @@ const Product = ({props}) => {
             <br /> <br /> 
         </div>
     </div>
-    <div class="col-md-4 well">
+    <div class="col-md-4 card">
         <p className="meals-des">
             <h3>{product.name}&nbsp; | &nbsp;
             <b>{product.price}</b></h3>
-            <button className="btn btn-danger"><b> {product.id + (product.name).substring(0, 1) +" " + product.name}</b></button>
+            <p className="text-warning"><b> {product.id + (product.name).substring(0, 1) +" " + product.name}</b></p> <hr />
             </p>
             <p>{product.description}</p>
-            <a href="{`/${product.id}`}" className="btn btn-info"><b>ADD TO CART</b></a>
+           <p> <a href="{`/${product.id}`}" className="btn btn-warning"><b>ADD TO CART</b>
+            </a></p>
     </div>
     </div> 
     ))}

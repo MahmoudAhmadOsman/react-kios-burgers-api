@@ -24,20 +24,17 @@ const Product = ({props}) => {
     <div className="meals_banner">
         <div className="container">
             <h1>{mealsList}</h1><hr /> <br />
-            <div className="row">
-                <div className="col-md-8">
-                    <img src="https://source.unsplash.com/1500x500/?hamburger" className="img-responsive"
+        <div className="row">
+        <div className="col-md-8">
+            <img src="https://source.unsplash.com/1500x500/?hamburger" className="img-responsive"
                         alt="meals banner image" />
-                </div>
-            </div>
         </div>
     </div>
-    {/* <!-- End of Meals container   1 --> */}
-
-
-    {/* <!-- Start of list of avaialable meals --> */}
-    <div className="meals-list">
-          
+    </div>
+    </div>
+{/* <!-- End of Meals container   1 --> */}
+{/* <!-- Start of list of avaialable meals --> */}
+<div className="meals-list">          
 {
 <div className="container">
     {products.map(product => (
@@ -48,7 +45,6 @@ const Product = ({props}) => {
             <img src={product.meal_image}
             className="img-responsive" alt={product.name} />
             </a>
-            
             <br /> <br /> 
         </div>
     </div>
@@ -66,14 +62,9 @@ const Product = ({props}) => {
     ))}
  </div> 
 }
- 
 </div>
-
-   
 {/* <!-- End of list of avaialable meals --> */}
-
-
-    {/* <!-- Start of list of avaialable Drinks --> */}
+{/* <!-- Start of list of avaialable Drinks --> */}
     <div className="drinks-list" style={{display:'none'}}>
         <div className="container">
             <h1>{availableDrinks}</h1> <hr />
@@ -94,13 +85,8 @@ const Product = ({props}) => {
         </div>
     </div>
     {/* <!-- End of list of avaialable Drinks --> */}
-    </section>
+</section>
     )
-
-
-
-
-
 }
 
 export default Product

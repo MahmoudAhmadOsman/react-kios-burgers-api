@@ -33,15 +33,40 @@ code {
 	background-color: #852cf6 !important;
 	border-color: #852cf6;
 }
-.main-navigation .navbar-inverse .navbar-brand {
+.main-navigation .navbar-default .navbar-brand {
 	color: #852cf6;
 	color: #fff;
 	font-weight: normal;
 }
-.main-navigation .right-links ul a {
+.main-navigation .navbar-default{
+	background-color: var(--mainColor);
+}
+.main-navigation .navbar-default .navbar-nav>li>a{
 	color: #fff !important;
 	font-weight: normal;
+	font-weight: bold;
+	font-size: 18px;
 }
+.main-navigation .navbar-default li.active{
+	background-color: #f00 !important;
+}
+
+/* Shopping cart */
+.navbar-right .shopping-cart{
+	background: #ff1818;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    left: 39px;
+    top: 4px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+    text-align: center;
+}
+
+
 
 /* Start of meals banner */
 .meals_banner {

@@ -25,7 +25,7 @@ const Product = ({props}) => {
         <div className="container">
             <h1>{mealsList}</h1><hr /> <br />
         <div className="row">
-        <div className="col-md-12">
+        <div className="col-md-">
             <img src="https://source.unsplash.com/1500x500/?hamburger" className="img-responsive"
                         alt="meals banner image" />
         </div>
@@ -37,14 +37,30 @@ const Product = ({props}) => {
 <div className="meals-list">          
 {
 <div className="container">
+
+ 
+
+
+
+
+
+
+
     {products.map(product => (
-          <div className="row" key={product.id}>
-        <div className="col-md-8">
+        <div className="row" key={product.id}>
+    {
+        product.length > 0 ? (
+        <span className="alert-danger">No Product Found!</span>
+        ): (
+        
+        <div className="show-product">
+           <div className="col-md-8">
         <div className="left-img">
-            <a href="{`${product.id}`}">
+            <Link to={`/product/${product.id}`}>
             <img src={product.meal_image}
             className="img-responsive" alt={product.name} />
-            </a>
+            </Link>
+            
             <br /> <br /> 
         </div>
     </div>
@@ -55,11 +71,18 @@ const Product = ({props}) => {
             <p className="text-warning"><b> {product.id + (product.name).substring(0, 1) +" " + product.name}</b></p> <hr />
             </p>
             <p>{product.description}</p>
-           <p> <a href="{`/${product.id}`}" className="btn btn-warning"><b>ADD TO CART</b>
-            </a></p>
+           <p> 
+               <Link to={`/product/${product.id}`} className="btn btn-warning"><b>ADD TO CART</b></Link>
+            </p>
     </div>
+    </div>
+        )
+    }
+  
     </div> 
+
     ))}
+
  </div> 
 }
 </div>

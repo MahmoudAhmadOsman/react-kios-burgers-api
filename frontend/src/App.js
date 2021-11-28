@@ -22,10 +22,7 @@ function App() {
       <Navigation />
       <div className="home_container">
       <Switch>
-         <Route exact path="/" component={Product}>
-          
-            {/* <Product /> */}
-        </Route>
+        <Route path="/" component={Product} exact={true}></Route>
         <Route path="/cart/:id?" component={CartScreen}></Route>
         <Route  path="/about" component={About}></Route>
       </Switch>

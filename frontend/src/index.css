@@ -97,8 +97,10 @@ code {
    
 }
 .meals-list  .card {
-    /* height: 350px !important; */
-	height: auto;
+	background-color: #eeeff1;
+    height: 250px !important;
+	margin-bottom: 10px;
+ 
     
 }
 .meals-list .meals-des {
@@ -126,3 +128,13 @@ code {
 	padding: 8px 0px;
 }
 /* End of list of avaialable drinks */
+
+
+
+/* Start of footer style */
+.footer{
+	margin-top: 1200px;
+	background-color: #888;
+	color: #fff;
+}
+/* End of footer style */

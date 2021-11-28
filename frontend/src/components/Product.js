@@ -25,7 +25,7 @@ const Product = ({props}) => {
         <div className="container">
             <h1>{mealsList}</h1><hr /> <br />
         <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-12">
             <img src="https://source.unsplash.com/1500x500/?hamburger" className="img-responsive"
                         alt="meals banner image" />
         </div>

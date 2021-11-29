@@ -9,7 +9,7 @@ const Product = ({props}) => {
 
      useEffect(() => {
          const fetchProducts = async()=>{
-            const products = await axios.get('https://blogs-api.herokuapp.com/ggag_meals')
+            const products = await axios.get('https://blogs-api.herokuapp.com/meals_api')
             setProducts(products.data); 
             console.log( products.data)
          }
@@ -38,14 +38,6 @@ const Product = ({props}) => {
 {
 <div className="container">
 
- 
-
-
-
-
-
-
-
     {products.map(product => (
         <div className="row" key={product.id}>
     {
@@ -56,7 +48,7 @@ const Product = ({props}) => {
         <div className="show-product">
            <div className="col-md-8">
         <div className="left-img">
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/cart/${product.id}`}>
             <img src={product.meal_image}
             className="img-responsive" alt={product.name} />
             </Link>
@@ -72,7 +64,7 @@ const Product = ({props}) => {
             </p>
             <p>{product.description}</p>
            <p> 
-               <Link to={`/product/${product.id}`} className="btn btn-warning"><b>ADD TO CART</b></Link>
+               <Link to={`/cart/${product.id}`} className="btn btn-warning"><b className="add_to_cart">ADD TO CART</b></Link>
             </p>
     </div>
     </div>

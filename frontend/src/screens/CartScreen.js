@@ -2,6 +2,7 @@ import React from 'react'
 
 const CartScreen = (props) => {
     const productId = props.match.params.id;
+    const { products } = props;
     console.log(productId)
     return (
         <section className="cart-container" style={{marginTop:"60px"}}>
@@ -10,6 +11,7 @@ const CartScreen = (props) => {
             <div className="row">
                 <div className="col-md-12">
                <p>{productId}</p>
+                
 
                 </div>
             </div>

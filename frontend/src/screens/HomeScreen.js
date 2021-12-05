@@ -10,8 +10,8 @@ const HomeScreen = () => {
         <br /> <br />
         <h1 className="ui text purple">{burgerTitles}</h1>
         <div className="ui three grid">
-          {data.products.map((product) => (
-            <Product key={product._id} product={product}></Product>
+          {data.burgers.map((burger) => (
+            <Product key={burger._id} burger={burger}></Product>
           ))}
         </div>
       </div>

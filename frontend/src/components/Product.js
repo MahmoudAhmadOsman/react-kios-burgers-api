@@ -2,32 +2,36 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Product = (props) => {
-  const { product } = props;
-  console.log(product);
+  const { burger } = props;
+  console.log(burger);
 
   return (
     <section className="product-container">
       <div class="ui card">
         <a href="/cart/`{product._id}`" class="ui medium image">
-          <img src={product.meal_img} alt={product.name}/>
+          <img src={burger.meal_img} alt={burger.name} />
         </a>
         <div class="content">
-          <a class="header">{product.name}</a>
+          <a class="header">{burger.name}</a>
           <div class="meta">
-            <span class="date"><b> {product._id + (product.name).substring(0, 1) + " " + "Burger"}</b></span>
+            <span class="date">
+              <b>
+                {" "}
+                {burger._id + burger.name.substring(0, 1) + " " + "Burger"}
+              </b>
+            </span>
           </div>
-          <div class="description">
-            {product.description}
-          </div>
+          <div class="description">{burger.description}</div>
         </div>
         <div class="extra content">
           <a>
             <i class="heart outlineicon icon"></i>
-            {product.calories} Calories
-          </a> &nbsp;
+            {burger.calories} Calories
+          </a>{" "}
+          &nbsp;
           <a>
             <i class="band aid icon"></i>
-            {product.fiber} Fiber
+            {burger.fiber} Fiber
           </a>
         </div>
       </div>

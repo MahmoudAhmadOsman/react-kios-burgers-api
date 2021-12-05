@@ -23,7 +23,7 @@ body {
 .main-navigation {
 	position: relative;
 }
-.main-navigation .navbar-inverse {
+.main-navigation .inverted {
 	background-color: #852cf6 !important;
 	border-color: #852cf6;
 }
@@ -83,13 +83,13 @@ body {
  
 .meals-list .left-img img {
      width: 100%;  
-    /* height: 350px !important; */
+    height: 100vh;
 	height: auto;
    
 }
 .meals-list  .card {
 	background-color: #eeeff1;
-    height: 250px !important;
+	height: 250px;
 	margin-bottom: 10px;
 }
 .meals-list .meals-des {
@@ -122,6 +122,25 @@ b.add_to_cart{
 	color: #fff;
 	font-weight: bold;
 }
+
+
+/* product Container */
+.product-container{
+	margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Start of footer style */
 .footer{
 	margin-top: 1200px;

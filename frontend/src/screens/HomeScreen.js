@@ -1,24 +1,22 @@
-import React, { useState } from 'react'
-import Product from '../components/Product'
-import Loading from '../components/Loading';
-import MessageBox from '../components/MessageBox'
-
+import React, { useState } from "react";
+import Product from "../components/Product";
+import data from "../data.json";
 const HomeScreen = () => {
-    const [loading, error, products] = useState({});
+  const burgerTitles = "List of Burgers";
+  return (
+    <section className="home_screen">
+      <div className="ui container">
+        {" "}
+        <br /> <br />
+        <h1 className="ui text purple">{burgerTitles}</h1>
+        <div className="ui three grid">
+          {data.products.map((product) => (
+            <Product key={product._id} product={product}></Product>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-    return (
-		<div>
-			{loading ? (
-				<Loading></Loading>
-			) : error ? (
-				<MessageBox variant="danger text-center">{error}</MessageBox>
-			) : (
-				<>
-					<Product products={products}></Product> 
-				</>
-			)}
-		</div>
-	);
-}
-
-export default HomeScreen
+export default HomeScreen;

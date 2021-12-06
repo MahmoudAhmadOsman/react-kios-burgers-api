@@ -7,7 +7,7 @@ const Product = (props) => {
 
   return (
     <section className="product-container">
-      
+
       <div class="ui card">
         <Link to={`/burger/${burger._id}`} class="ui large image">
           <img src={burger.meal_img} alt={burger.name} />
@@ -25,21 +25,23 @@ const Product = (props) => {
           <div class="description">{burger.description}</div>
         </div>
         <div class="extra content">
-          <a>
-            <i class="heart outline icon"></i>
-            {burger.calories} Calories
-          </a> 
-          &nbsp;
+
+
           {/* Start of add to cart */}
-         <a href="">
-         <div class="ui left action input container">
-            <button class="ui teal labeled icon button">
-              <i class="cart icon"></i>
-              Checkout
-            </button>
-            <input type="text" disabled value={burger.price} />
-          </div>
-         </a>
+          <Link to="#">
+            <div class="ui left action input">
+              <button className="ui button" title="Calories">
+                <i class="heart outline icon" ></i>
+                <small className="ui heart outline icon">{burger.calories} </small>
+              </button>
+              <button class="ui teal icon button">
+                <i class="cart icon"></i>&nbsp;
+                Checkout
+              </button>
+              <button className="ui button">{burger.price}</button>
+              {/* <input type="text" disabled value={burger.price} /> */}
+            </div>
+          </Link>
           {/* End of add to cart */}
         </div>
       </div>

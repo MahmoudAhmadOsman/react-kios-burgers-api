@@ -7,8 +7,9 @@ const Product = (props) => {
 
   return (
     <section className="product-container">
+      
       <div class="ui card">
-        <Link to={`/burger/${burger._id}`} class="ui medium image">
+        <Link to={`/burger/${burger._id}`} class="ui large image">
           <img src={burger.meal_img} alt={burger.name} />
         </Link>
         <div class="content">
@@ -27,13 +28,19 @@ const Product = (props) => {
           <a>
             <i class="heart outline icon"></i>
             {burger.calories} Calories
-          </a>{" "}
+          </a> 
           &nbsp;
-          {/* <a> <i class="band aid icon"></i> {burger.fiber} Fiber </a> */}
-          <a>
-            {" "}
-            <i class="user md icon"></i> {burger.protein} Protein{" "}
-          </a>
+          {/* Start of add to cart */}
+         <a href="">
+         <div class="ui left action input container">
+            <button class="ui teal labeled icon button">
+              <i class="cart icon"></i>
+              Checkout
+            </button>
+            <input type="text" disabled value={burger.price} />
+          </div>
+         </a>
+          {/* End of add to cart */}
         </div>
       </div>
     </section>

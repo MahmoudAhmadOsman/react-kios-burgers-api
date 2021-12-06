@@ -4,54 +4,57 @@ const Navigation = () => {
     <section className="main-navigation">
       <div class="ui fixed inverted menu">
         <div class="ui container">
-          <a href="/" class="header item">
-            <img class="logo" src="assets/images/favicon.ico" /> &nbsp;
-            KIOS
-          </a>
-          <a href="/" class="item">
+          <Link to="/" class="header item">
+            <img class="logo" src="assets/images/favicon.ico" /> &nbsp; KIOS
+          </Link>
+          <Link to="/" class="item">
             Home
-          </a>
-          <a href="/" class="item">
+          </Link>
+          <Link to="/" class="item">
             Burgers
-          </a>
+          </Link>
           <div class="ui simple dropdown item">
             Services <i class="dropdown icon"></i>
             <div class="menu">
-              <a class="item" href="#">
-               Burgers
-              </a>
-              <a class="item" href="#">
+              <Link class="item" to="#">
+                Burgers
+              </Link>
+              <Link class="item" to="#">
                 Sandwitches
-              </a>
+              </Link>
               <div class="divider"></div>
               <div class="header">Drinks</div>
               <div class="item">
                 <i class="dropdown icon"></i>
                 Sweet drinks
                 <div class="menu">
-                  <a class="item" href="#">
-                   Sweet Orion
-                  </a>
-                  <a class="item" href="#">
+                  <Link class="item" to="#">
+                    Sweet Orion
+                  </Link>
+                  <Link class="item" to="#">
                     Sweet & Banana
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <a class="item" href="#">
+              <Link class="item" to="#">
                 Oragan & Orio
-              </a>
+              </Link>
             </div>
           </div>
-          <a href="/about" class="item">
+          <Link to="/about" class="item">
             About
-          </a>
-          <a href="/" class="item">
+          </Link>
+          <Link to="/" class="item">
             Contact
-          </a>
+          </Link>
           <div class="right item">
-          <a href="#" class="ui inverted button">Log in</a>
-          <a href="#" class="ui inverted button">Sign Up</a>
-        </div>
+            <Link to="/login" class="ui inverted button">
+              Log in
+            </Link>
+            <Link to="#" class="ui inverted button">
+              Sign Up
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -8,9 +8,9 @@ const Product = (props) => {
   return (
     <section className="product-container">
       <div class="ui card">
-        <a href="/cart/`{product._id}`" class="ui medium image">
+        <Link to={`/burger/${burger._id}`} class="ui medium image">
           <img src={burger.meal_img} alt={burger.name} />
-        </a>
+        </Link>
         <div class="content">
           <a class="header">{burger.name}</a>
           <div class="meta">
@@ -25,13 +25,14 @@ const Product = (props) => {
         </div>
         <div class="extra content">
           <a>
-            <i class="heart outlineicon icon"></i>
+            <i class="heart outline icon"></i>
             {burger.calories} Calories
           </a>{" "}
           &nbsp;
+          {/* <a> <i class="band aid icon"></i> {burger.fiber} Fiber </a> */}
           <a>
-            <i class="band aid icon"></i>
-            {burger.fiber} Fiber
+            {" "}
+            <i class="user md icon"></i> {burger.protein} Protein{" "}
           </a>
         </div>
       </div>

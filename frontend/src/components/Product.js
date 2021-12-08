@@ -34,7 +34,7 @@ const Product = (props) => {
                 <i class="heart outline icon" ></i>
                 <small className="ui heart outline icon">{burger.calories} </small>
               </button>
-              <button class="ui teal icon button">
+              <button class="ui violet icon button">
                 <i class="cart icon"></i>&nbsp;
                 Checkout
               </button>

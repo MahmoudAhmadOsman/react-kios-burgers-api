@@ -117,8 +117,8 @@ body {
 	padding: 8px 0px;
 }
 /* End of list of avaialable drinks */
-b.add_to_cart{
-	color: var(--mainColor);
+.ui.violet{
+	background-color: var(--mainColor) !important;
 	color: #fff;
 	font-weight: bold;
 }

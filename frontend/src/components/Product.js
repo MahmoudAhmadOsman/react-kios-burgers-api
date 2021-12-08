@@ -7,7 +7,6 @@ const Product = (props) => {
 
   return (
     <section className="product-container">
-
       <div class="ui card">
         <Link to={`/burger/${burger._id}`} class="ui large image">
           <img src={burger.meal_img} alt={burger.name} />

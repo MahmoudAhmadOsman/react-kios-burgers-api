@@ -5,7 +5,7 @@ import Burger from "../models/burgerModel";
 
 const burgersRouter = express.Router;
 
-burgersRouter.length(
+burgersRouter.get(
   "/",
   expressAsyncHandler(async (req, res) => {
     const burgers = await Burger.fund({});

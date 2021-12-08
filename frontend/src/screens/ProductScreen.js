@@ -11,6 +11,7 @@ const ProductScreen = (props) => {
     <section className="burgers-details" style={{ marginTop: "60px" }}>
       <div className="ui container">
         <h1>Burger Screen</h1> <div className="ui divider"></div>
+        <b>Burger ID: </b>
         {burgertId}
       </div>
     </section>

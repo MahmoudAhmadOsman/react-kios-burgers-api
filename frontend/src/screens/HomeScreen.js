@@ -5,14 +5,14 @@ const HomeScreen = () => {
   const burgerTitles = "List of Burgers";
   return (
     <section className="home_screen">
-      <div className="ui container">
-        {" "}
-        <br /> <br />
-        <h1 className="ui text purple">{burgerTitles}</h1>
-        <div className="ui three grid">
-          {data.burgers.map((burger) => (
-            <Product key={burger._id} burger={burger}></Product>
-          ))}
+      <div className="ui container" style={{ marginTop: "80px" }}>
+        <div className="row">
+          <h1 className="ui header">{burgerTitles}</h1>
+          <div className="ui three grid">
+            {data.burgers.map((burger) => (
+              <Product key={burger._id} burger={burger}></Product>
+            ))}
+          </div>
         </div>
       </div>
     </section>

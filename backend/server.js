@@ -1,6 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
+//Burges api Routes
+import burgerRouter from "./routes/burgerRouter.js";
+
 dotenv.config();
 
 const app = express();
@@ -12,6 +16,9 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+//Burges api Routes
+app.use("/api/burgers", burgerRouter); //burgers api
 
 app.get("/", (req, res) => {
   res.send("Burgers api");

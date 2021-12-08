@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Burgers api");
 });
 
 //Show all errors - server errors
@@ -22,9 +22,9 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 //Show/handle  server error in a better way

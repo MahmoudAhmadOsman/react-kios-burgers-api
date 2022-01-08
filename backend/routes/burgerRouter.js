@@ -8,7 +8,6 @@ const burgersRouter = express.Router();
 burgersRouter.get(
 	"/",
 	expressAsyncHandler(async (req, res) => {
-		// const burgers = await Burger.find({});
 		const burgers = await Burger.find({});
 		// console.log(burgers);
 		res.send(burgers);

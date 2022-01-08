@@ -1,12 +1,12 @@
 ## Express js & React js Fullstack Application
 
- Built  with React js, Express js, Mongoose, MongoDB & Bootstrap 4.
+ Built  with React js, Express js, Mongoose, MongoDB & Semantic UI.
 ## Used Technologies : 
  * React js
  * Express js
  * MongoDB
  * Mongoose
- * Bootstrap 4
+ * Semantic UI
 
 
 ### My Website

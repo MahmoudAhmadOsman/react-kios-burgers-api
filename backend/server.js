@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-// import data from "./data";
+// import data from "./data.json";
 //Burges api Routes
 import burgerRouter from "./routes/burgerRouter.js";
 
@@ -22,7 +22,8 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
 app.use("/api/burgers", burgerRouter);
 
 app.get("/", (req, res) => {
-	res.send("Burgers api");
+	res.json({ Page: "Not Found" });
+	// res.status(301).redirect("/api/burgers");
 });
 
 //Show all errors - server errors

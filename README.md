@@ -1,4 +1,4 @@
-## Express js & React js CRUD RESTAPI
+## Express js & React js Fullstack Application
 
  Built  with React js, Express js, Mongoose, MongoDB & Bootstrap 4.
 ## Used Technologies : 

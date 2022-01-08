@@ -1,4 +1,4 @@
-## Express js & Angular CRUD RESTAPI
+## Express js & React js CRUD RESTAPI
 
  Built  with React js, Express js, Mongoose, MongoDB & Bootstrap 4.
 ## Used Technologies : 

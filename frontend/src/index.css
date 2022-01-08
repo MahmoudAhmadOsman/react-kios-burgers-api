@@ -4,14 +4,14 @@
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
- 
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;	
-  /* height: 2500px; */
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* height: 2500px; */
 }
 
 :root {
@@ -32,32 +32,32 @@ body {
 	color: #fff;
 	font-weight: normal;
 }
-.main-navigation .navbar-default{
+.main-navigation .navbar-default {
 	background-color: var(--mainColor);
 }
-.main-navigation .navbar-default .navbar-nav>li>a{
+.main-navigation .navbar-default .navbar-nav > li > a {
 	color: #fff !important;
 	font-weight: normal;
 	font-weight: bold;
 	font-size: 18px;
 }
-.main-navigation .navbar-default li.active{
+.main-navigation .navbar-default li.active {
 	background-color: #f00 !important;
 }
 
 /* Shopping cart */
-.navbar-right .shopping-cart{
+.navbar-right .shopping-cart {
 	background: #ff1818;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    border-radius: 50%;
-    left: 39px;
-    top: 4px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	border-radius: 50%;
+	left: 39px;
+	top: 4px;
 	color: #fff;
 	font-weight: bold;
 	font-size: 16px;
-    text-align: center;
+	text-align: center;
 }
 
 /* Start of meals banner */
@@ -80,14 +80,13 @@ body {
 .meals-list {
 	position: relative;
 }
- 
+
 .meals-list .left-img img {
-     width: 100%;  
-    height: 100vh;
+	width: 100%;
+	height: 100vh;
 	height: auto;
-   
 }
-.meals-list  .card {
+.meals-list .card {
 	background-color: #eeeff1;
 	height: 250px;
 	margin-bottom: 10px;
@@ -117,35 +116,22 @@ body {
 	padding: 8px 0px;
 }
 /* End of list of avaialable drinks */
-.ui.violet{
+.ui.violet {
 	background-color: var(--mainColor) !important;
 	color: #fff;
 	font-weight: bold;
 }
 
-
 /* product Container */
-.product-container{
+.product-container {
 	margin-top: 60px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Start of footer style */
-.footer{
+.footer {
 	margin-top: 1200px;
 	background-color: #852cf6;
 	color: #fff;
-
+	text-align: center;
 }
 /* End of footer style */

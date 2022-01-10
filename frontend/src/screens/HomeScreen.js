@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Product from "../components/Product";
 import data from "../data.json";
 const HomeScreen = () => {
-	const burgerTitles = "List of Burgers";
+	const burgerTitles = "List of Available Burgers";
 	return (
 		<section className="home_screen">
 			<div className="ui container" style={{ marginTop: "80px" }}>

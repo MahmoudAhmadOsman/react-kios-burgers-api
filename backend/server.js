@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
 app.use("/api/burgers", burgerRouter);
 
 app.get("/", (req, res) => {
-	res.json({ Page: "Not Found" });
+	res.json({ Page: "Restricted Route!!" });
 	// res.status(301).redirect("/api/burgers");
 });
 

@@ -27,18 +27,15 @@ burgersRouter.get(
 );
 
 //Get a burger by id
+
 burgersRouter.get(
 	"/:id",
 	expressAsyncHandler(async (req, res) => {
 		const burger = await Burger.findById(req.params.id);
-		console.log(req.params._id);
-		// if (!mongoose.Types.ObjectId.isValid(id)) return false;
 		if (burger) {
-			res.send("burger");
+			res.send(burger);
 		} else {
-			res
-				.status(404)
-				.send({ message: `Burger with this ${_id} id not found!` });
+			res.status(404).send({ message: "Burger Not Found" });
 		}
 	})
 );

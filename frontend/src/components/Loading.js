@@ -1,15 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Loading = () => {
-    return (
-        <section className="container">
-      <div className="row">
-        <div className="col-md-6 mx-auto">
-          <i className="fa fa-spinner fa-3x fa-spin"></i>
-        </div>
-      </div>
-    </section>
-    )
-}
+	return (
+		<section className="ui container">
+			<div className="ui segment">
+				<div className="ui active inverted dimmer">
+					<div className="ui text loader">Loading</div>
+				</div>
+				<p></p>
+			</div>
+		</section>
+	);
+};
 
-export default Loading
+export default Loading;

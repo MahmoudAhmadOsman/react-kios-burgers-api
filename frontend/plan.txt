@@ -1,0 +1,3 @@
+- install axios
+- fetch data from backend instead of data.json in the frontend
+- create react hooks, useState(), useEffect() and fetch data from /api/burgers in the backend

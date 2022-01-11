@@ -17,7 +17,10 @@ const Product = (props) => {
 						<span className="date">
 							<b>
 								{" "}
-								{burger._id + burger.name.substring(0, 1) + " " + "Burger"}
+								{burger._id.substring(2, 3) +
+									burger.name.substring(0, 1) +
+									" " +
+									"Burger"}
 							</b>
 						</span>
 					</div>

@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-
 // import data from "./data.json";
 //Burges api Routes
 import burgerRouter from "./routes/burgerRouter.js";
@@ -20,11 +19,10 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
 
 //Burges api Routes
 app.use("/api/burgers", burgerRouter);
-
-app.get("/", (req, res) => {
-	res.json({ Page: "Restricted Route!!" });
-	// res.status(301).redirect("/api/burgers");
-});
+// res.status(301).redirect("/api/burgers");
+// app.get("/", (req, res) => {
+// 	res.json({ Page: "Restricted Route!!" });
+// });
 
 //Show all errors - server errors
 app.use((err, req, res, next) => {

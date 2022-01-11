@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import expressAsyncHandler from "express-async-handler";
 import data from "../data.js";
 import Burger from "../models/burgerModel.js";
@@ -35,7 +34,7 @@ burgersRouter.get(
 		if (burger) {
 			res.send(burger);
 		} else {
-			res.status(404).send({ message: "Burger Not Found" });
+			res.status(404).send({ message: "Burger Not Found!" });
 		}
 	})
 );

@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+// const config = require("./config/database");
 import dotenv from "dotenv";
 // import data from "./data.json";
 //Burges api Routes

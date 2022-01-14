@@ -1,8 +1,6 @@
 import React from "react";
 <<<<<<< HEAD
 import Zoom from "react-reveal/Zoom";
-=======
->>>>>>> a96c0acb36381d824f84fec8da85d1e39df95f28
 import { Link } from "react-router-dom";
 
 const Product = (props) => {

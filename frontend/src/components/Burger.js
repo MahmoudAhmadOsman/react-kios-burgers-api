@@ -53,7 +53,7 @@ const Product = (props) => {
 													<button className="ui violet icon button">
 														<i className="cart icon"></i>&nbsp; Checkout
 													</button>
-													<button className="ui button">{burger.price}</button>
+													<button className="ui button">${burger.price}</button>
 													{/* <input type="text" disabled value={burger.price} /> */}
 												</div>
 											</Link>

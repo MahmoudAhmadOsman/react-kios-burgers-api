@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import Zoom from "react-reveal/Zoom";
 import { Link } from "react-router-dom";
 

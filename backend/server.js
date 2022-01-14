@@ -20,10 +20,13 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/burgersdb", {
 //Burges api Routes
 app.use("/api/burgers", burgerRouter);
 // res.status(301).redirect("/api/burgers");
-// app.get("/", (req, res) => {
-// 	res.json({ Page: "Restricted Route!!" });
-// });
+app.get("/", (req, res) => {
+	res.json({ Page: "Restricted Route!!" });
+});
 
+app.use("*", (req, res) => {
+	res.status(404).json({ error: "Burger with is address is not found!" });
+});
 //Show all errors - server errors
 app.use((err, req, res, next) => {
 	res.status(500).send({ message: err.message });

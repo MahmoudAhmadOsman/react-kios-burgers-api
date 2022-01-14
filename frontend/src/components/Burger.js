@@ -23,7 +23,10 @@ const Product = (props) => {
 											<img src={burger.meal_img} alt={burger.name} />
 										</Link>
 										<div className="content">
-											<Link className="header">{burger.name}</Link>
+											<Zoom left>
+												{" "}
+												<h1 className="header">{burger.name}</h1>
+											</Zoom>
 											<div className="meta">
 												<span className="date">
 													<b>

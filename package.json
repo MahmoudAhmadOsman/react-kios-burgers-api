@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://netsansoftware@bitbucket.org/netsansoftware/ggag-payment.git"
+    "url": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git"
   },
   "author": "Mahmoud Osman",
   "license": "MIT",
   "bugs": {
-    "url": "https://bitbucket.org/netsansoftware/ggag-payment/issues"
+    "url": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git/issues"
   },
-  "homepage": "https://bitbucket.org/netsansoftware/ggag-payment#readme",
+  "homepage": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "concurrently": "^6.4.0",

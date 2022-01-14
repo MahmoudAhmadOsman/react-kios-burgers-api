@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Product from "../components/Product";
+import Burger from "../components/Burger";
 import Loading from "../components/Loading";
 import ErrorMessage from "../components/ErrorMessage";
 // import data from "../data.json";
@@ -35,7 +35,7 @@ const HomeScreen = () => {
 				<ErrorMessage></ErrorMessage>
 			) : (
 				<>
-					<Product burgers={burgers}></Product>
+					<Burger burgers={burgers}></Burger>
 				</>
 			)}
 		</section>

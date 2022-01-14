@@ -1,8 +1,6 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import data from "./data.json";
 import Navigation from "./components/Navigation";
-import Product from "./components/Product";
 import HomeScreen from "./screens/HomeScreen";
 import About from "./components/About";
 import CartScreen from "./screens/CartScreen";

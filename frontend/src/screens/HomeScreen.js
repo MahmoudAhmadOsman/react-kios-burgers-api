@@ -10,7 +10,7 @@ const HomeScreen = () => {
 	//1. Now, get burgers list from redux store using useSelctor hook
 	const burgerList = useSelector((state) => state.burgerList);
 
-	//2. Next, get three elements from burgerList state
+	//2. Next, get three elements from burgerList state in burgerReducer
 	const { loading, error, burgers } = burgerList;
 
 	//3. Fetch data from redux state using useEffect hook

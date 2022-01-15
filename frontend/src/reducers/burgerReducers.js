@@ -17,6 +17,7 @@ export const burgerListReducer = (
 				loading: false,
 				burgers: action.payload,
 			};
+
 		case BURGER_LIST_FAILL:
 			return {
 				loading: false,

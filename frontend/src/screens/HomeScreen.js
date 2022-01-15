@@ -13,7 +13,7 @@ const HomeScreen = () => {
 	//2. Next, get three elements from burgerList state
 	const { loading, error, burgers } = burgerList;
 
-	//Fetch data from backend api, /api/burgers
+	//3. Fetch data from redux state using useEffect hook
 	useEffect(() => {
 		//3. Dispatch the list of burges here
 		dispatch(listBurgers());

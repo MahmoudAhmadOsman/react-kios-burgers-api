@@ -1,4 +1,5 @@
 import express from "express";
+
 import mongoose from "mongoose";
 // const config = require("./config/database");
 import dotenv from "dotenv";
@@ -9,6 +10,7 @@ import burgerRouter from "./routes/burgerRouter.js";
 dotenv.config();
 
 const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -24,6 +26,15 @@ app.use("/api/burgers", burgerRouter);
 app.get("/", (req, res) => {
 	res.json({ Page: "Restricted Route!!" });
 });
+
+// app.get("/api/burgers/:id", (req, res) => {
+// 	const burgers = data.burgers.find((x) => x._id === req.params.id);
+// 	if (burgers) {
+// 		res.send(burgers);
+// 	} else {
+// 		res.status(404).send({ message: "burgers Not Found" });
+// 	}
+// });
 
 app.use("*", (req, res) => {
 	res.status(404).json({ error: "Burger with is address is not found!" });

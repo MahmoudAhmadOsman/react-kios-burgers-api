@@ -1,9 +1,10 @@
 import {
-	BURGER_LIST_FAILL,
+	BURGER_LIST_FAIL,
 	BURGER_LIST_REQUEST,
 	BURGER_LIST_SUCCESS,
 } from "../constants/burgerConstants";
 
+//1. Burger reducer list
 export const burgerListReducer = (
 	state = { loading: true, burgers: [] },
 	action
@@ -18,7 +19,7 @@ export const burgerListReducer = (
 				burgers: action.payload,
 			};
 
-		case BURGER_LIST_FAILL:
+		case BURGER_LIST_FAIL:
 			return {
 				loading: false,
 				error: action.payload,
@@ -28,5 +29,7 @@ export const burgerListReducer = (
 			return state;
 	}
 };
+
+//1. Burger reducer details
 
 //export this function to combibed reducers in store.js

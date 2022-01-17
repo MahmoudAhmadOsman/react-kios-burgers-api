@@ -14,10 +14,10 @@ function App() {
 				<Navigation />
 				<div className="home_container">
 					<Switch>
-						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/cart/:id?" component={CartScreen}></Route>
 						<Route path="/about" component={About}></Route>
-						<Route path="/login" component={LoginScreen}></Route>
+						<Route path="/login" component={LoginScreen}></Route>{" "}
+						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/" component={HomeScreen} exact={true}></Route>
 					</Switch>
 				</div>

@@ -54,7 +54,6 @@ const Product = (props) => {
 														<i className="cart icon"></i>&nbsp; Checkout
 													</button>
 													<button className="ui button">${burger.price}</button>
-													{/* <input type="text" disabled value={burger.price} /> */}
 												</div>
 											</Link>
 											{/* End of add to cart */}

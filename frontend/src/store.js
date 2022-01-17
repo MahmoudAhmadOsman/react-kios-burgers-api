@@ -9,9 +9,6 @@ const InitialState = {};
 const reducer = combineReducers({
 	burgerList: burgerListReducer,
 });
-// const reducer = (state, action) => {
-// 	return { burgers: data.burgers };
-// };
 
 //Middleware
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

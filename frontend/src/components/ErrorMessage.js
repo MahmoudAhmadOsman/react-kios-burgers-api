@@ -1,10 +1,10 @@
 import React from "react";
 
-function ErrorMessage() {
+function ErrorMessage(props) {
 	return (
-		<section className="ui container" style={{ marginTop: "160px" }}>
-			<div className="ui warning message">
-				<div className="header">Unable to display data!</div>
+		<section className="container" style={{ marginTop: "160px" }}>
+			<div className="alert alert-danger" role="alert">
+				<div className="h1">{props.children}</div>
 			</div>
 		</section>
 	);

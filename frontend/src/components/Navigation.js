@@ -2,62 +2,65 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
 	return (
 		<section className="main-navigation">
-			<div className="ui fixed inverted menu">
-				<div className="ui container">
-					<Link to="/" className="header item">
-						<img className="logo" src="assets/images/favicon.ico" alt="logo" />{" "}
-						&nbsp; KIOS
+			<nav className="navbar navbar-expand-md navbar-dark  bg-dark">
+				<div className="container-fluid">
+					<Link className="navbar-brand" to="/">
+						<img
+							className="logo img-fluid"
+							src="/assets/images/favicon.ico"
+							alt="logo"
+							style={{ height: "40px" }}
+						/>
 					</Link>
-					<Link to="/" className="item">
-						Home
-					</Link>
-					<Link to="/" className="item">
-						Burgers
-					</Link>
-					<div className="ui simple dropdown item">
-						Services <i className="dropdown icon"></i>
-						<div className="menu">
-							<Link className="item" to="#">
-								Burgers
+					<button
+						className="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse"
+						aria-controls="navbarCollapse"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span className="navbar-toggler-icon" />
+					</button>
+					<div className="collapse navbar-collapse" id="navbarCollapse">
+						<ul className="navbar-nav me-auto mb-2 mb-md-0">
+							<li className="nav-item">
+								<Link className="nav-link active" aria-current="page" to="#">
+									Home
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link className="nav-link" to="/">
+									Burgers
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									className="nav-link"
+									to="#"
+									tabIndex={-1}
+									aria-disabled="true"
+								>
+									About
+								</Link>
+							</li>
+						</ul>
+
+						<ul class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
+								Cart
 							</Link>
-							<Link className="item" to="#">
-								Sandwitches
+							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
+								Sign in
 							</Link>
-							<div className="divider"></div>
-							<div className="header">Drinks</div>
-							<div className="item">
-								<i className="dropdown icon"></i>
-								Sweet drinks
-								<div className="menu">
-									<Link className="item" to="#">
-										Sweet Orion
-									</Link>
-									<Link className="item" to="#">
-										Sweet & Banana
-									</Link>
-								</div>
-							</div>
-							<Link className="item" to="#">
-								Oragan & Orio
+							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
+								Sign up
 							</Link>
-						</div>
-					</div>
-					<Link to="/about" className="item">
-						About
-					</Link>
-					<Link to="/" className="item">
-						Contact
-					</Link>
-					<div className="right item">
-						<Link to="/login" className="ui inverted button">
-							Log in
-						</Link>
-						<Link to="#" className="ui inverted button">
-							Sign Up
-						</Link>
+						</ul>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</section>
 	);
 };

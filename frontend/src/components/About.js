@@ -22,12 +22,13 @@ const About = () => {
 								</div>
 								<div className="description">
 									<p>
-										I am software engineer and have worked on multiple projects
-										in the past that made the web more secure and enjoyable for
-										users. The most recent projects that I have involved in are:
-										Angular, Spring Boot, Express, React, MYSQL, MongoDB where
-										we built full fledged applications that utilizes both
-										frontend and backend technologies.
+										I am a software engineer and have worked on multiple
+										projects in the past that made the web more secure and
+										enjoyable for end users. The most recent projects that I
+										have involved in are: Angular, Spring Boot, Express, React,
+										MYSQL, MongoDB where we built fully fledged applications
+										that utilized both frontend and backend MVC architectural
+										pattern.
 									</p>
 								</div>
 							</div>

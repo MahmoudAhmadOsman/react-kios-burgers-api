@@ -51,7 +51,10 @@ const Navigation = () => {
 							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
 								Cart
 							</Link>
-							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
+							<Link
+								class="me-3 py-2 text-white text-decoration-none"
+								to="/signin"
+							>
 								Sign in
 							</Link>
 							<Link class="me-3 py-2 text-white text-decoration-none" to="#">

@@ -1,0 +1,9 @@
+//Burger redux get request
+export const BURGER_LIST_REQUEST = "BURGER_LIST_REQUEST";
+export const BURGER_LIST_SUCCESS = "BURGER_LIST_SUCCESS";
+export const BURGER_LIST_FAIL = "BURGER_LIST_FAIL";
+
+//Burger details constants
+export const BURGER_DETAILS_REQUEST = "BURGER_DETAILS_REQUEST";
+export const BURGER_DETAILS_SUCCESS = "BURGER_DETAILS_SUCCESS";
+export const BURGER_DETAILS_FAIL = "BURGER_DETAILS_FAIL";

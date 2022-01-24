@@ -1,4 +1,5 @@
 import React from "react";
+import Zoom from "react-reveal";
 import { Link } from "react-router-dom";
 import data from "../data";
 const BurgerScreen = (props) => {
@@ -15,13 +16,17 @@ const BurgerScreen = (props) => {
 	}
 
 	return (
-		<section className="burger-details" style={{ marginTop: "80px" }}>
+		<section className="burger-details">
 			<div className="container">
 				<div className="row">
 					<Link to="/">
 						<i className="fa fa-chevron-circle-left"></i> Back
 					</Link>
-					<h1 className="text-danger"> Burger Details</h1> <hr /> <br /> <br />
+					<Zoom left>
+						<h1 className="text-danger"> Burger Details</h1>
+						<br />
+					</Zoom>
+					<hr />
 					<div className="col-md-4">
 						<img
 							className="img-fluid"
@@ -30,7 +35,9 @@ const BurgerScreen = (props) => {
 						/>
 						<div className="description mt-3">
 							<h2>Description:</h2>
-							<p>{burger.description}</p>
+							<Zoom top>
+								<p>{burger.description}</p>
+							</Zoom>
 						</div>
 					</div>
 					<div className="col-md-8">
@@ -40,6 +47,7 @@ const BurgerScreen = (props) => {
 							<table class="table table-bordered">
 								<thead>
 									<tr>
+										<th>Name/Code</th>
 										<th>Calories </th>
 										<th>Fiber </th>
 										<th>Proteim </th>
@@ -48,6 +56,14 @@ const BurgerScreen = (props) => {
 								</thead>
 								<tbody>
 									<tr>
+										<td>
+											{burger.name} |{" "}
+											{burger._id.substring(0, 0) +
+												burger.name.substring(0, 1) +
+												" " +
+												burger._id +
+												1}
+										</td>
 										<td>{burger.calories}</td>
 										<td>{burger.fiber}</td>
 										<td>{burger.protein}</td>
@@ -58,7 +74,7 @@ const BurgerScreen = (props) => {
 						</div>
 
 						<div class="btn btn-success font-weight-bold btn-lg mt-5">
-							ADD TO CART
+							<Zoom right> ADD TO CART</Zoom>
 						</div>
 					</div>
 				</div>

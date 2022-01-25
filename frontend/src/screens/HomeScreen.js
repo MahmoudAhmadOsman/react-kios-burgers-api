@@ -49,12 +49,6 @@ function HomeScreen() {
 					<Burger burgers={burgers}></Burger>
 				</>
 			)}
-			{/* <section className="burger-container">
-			{data.burgers.map((burger) => (
-				<Burger key={burger._id} burger={burger}></Burger>
-			))}
-			<Burger burgers={burgers}></Burger>
-		</section> */}
 		</section>
 	);
 }

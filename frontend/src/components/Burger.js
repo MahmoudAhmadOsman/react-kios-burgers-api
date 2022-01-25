@@ -1,7 +1,7 @@
 import React from "react";
 import Zoom from "react-reveal/Zoom";
 import { Link } from "react-router-dom";
-import data from "../data.js";
+// import data from "../data.js";
 const Burger = (props) => {
 	const burgerTitles = "List of  Burgers";
 	const { burgers } = props;
@@ -24,7 +24,7 @@ const Burger = (props) => {
 										/>
 									</Link>
 
-									<div class="card-body">
+									<div className="card-body">
 										<Zoom left>
 											<h5 class="card-title">
 												{burger.name} |{" "}
@@ -38,15 +38,15 @@ const Burger = (props) => {
 												</b>
 											</h5>
 										</Zoom>
-										<p class="card-text">{burger.description}</p>
+										<p className="card-text">{burger.description}</p>
 
 										<button
 											type="button"
-											class="btn btn-light position-relative"
+											className="btn btn-light position-relative"
 										>
 											Calories
 											<span
-												class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+												className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
 												title="Calories"
 											>
 												{burger.calories}

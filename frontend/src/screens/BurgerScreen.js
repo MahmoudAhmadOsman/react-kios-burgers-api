@@ -43,7 +43,7 @@ const BurgerScreen = (props) => {
 					<div className="col-md-8">
 						<h1>{burger.name}</h1>
 
-						<div class="table-responsive">
+						<div className="table-responsive">
 							<table class="table table-bordered">
 								<thead>
 									<tr>
@@ -73,7 +73,7 @@ const BurgerScreen = (props) => {
 							</table>
 						</div>
 
-						<div class="btn btn-success font-weight-bold btn-lg mt-5">
+						<div className="btn btn-success font-weight-bold btn-lg mt-5">
 							<Zoom right> ADD TO CART</Zoom>
 						</div>
 					</div>

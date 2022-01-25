@@ -4,6 +4,7 @@ import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Footer from "./components/Footer";
 import BurgerScreen from "./screens/BurgerScreen";
+import About from "./components/About";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 					<Switch>
 						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/signin" component={LoginScreen}></Route>
+						<Route path="/about" component={About}></Route>
 						<Route path="/" component={HomeScreen} exact={true}></Route>
 					</Switch>
 				</div>

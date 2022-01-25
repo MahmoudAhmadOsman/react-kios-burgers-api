@@ -38,7 +38,7 @@ const Navigation = () => {
 							<li className="nav-item">
 								<Link
 									className="nav-link"
-									to="#"
+									to="/about"
 									tabIndex={-1}
 									aria-disabled="true"
 								>

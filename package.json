@@ -1,5 +1,5 @@
 {
-  "name": "react-kios-semantic-ui",
+  "name": "react-kios-burgers-api",
   "type": "module",
   "version": "1.0.0",
   "description": "kios burger self ordering app",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git"
+    "url": "https://github.com/MahmoudAhmadOsman/react-kios-burgers-api.git"
   },
   "author": "Mahmoud Osman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git/issues"
+    "url": "https://github.com/MahmoudAhmadOsman/react-kios-burgers-api.git/issues"
   },
-  "homepage": "https://github.com/MahmoudAhmadOsman/react-kios-semantic-ui.git#readme",
+  "homepage": "https://github.com/MahmoudAhmadOsman/react-kios-burgers-api.git#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "concurrently": "^6.4.0",

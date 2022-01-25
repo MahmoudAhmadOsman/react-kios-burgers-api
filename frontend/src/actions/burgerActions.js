@@ -5,7 +5,8 @@ import {
 	BURGER_LIST_SUCCESS,
 } from "../constants/burgerConstants";
 
-export const listBurgers = () => async (dispatch) => {
+//listOfBurgers= listBurgers
+export const listOfBurgers = () => async (dispatch) => {
 	//1. dispatch the burgers's list action
 	dispatch({
 		type: BURGER_LIST_REQUEST,

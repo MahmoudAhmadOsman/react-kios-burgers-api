@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Loading from "../components/Loading";
 import ErrorMessage from "../components/ErrorMessage";
 import { useDispatch, useSelector } from "react-redux";
+import { listOfBurgers } from "../actions/burgerActions";
 
 import Burger from "../components/Burger.js";
 // import data from "../data.js";
@@ -15,9 +16,8 @@ function HomeScreen() {
 	const { loading, error, burgers } = burgerList;
 
 	//3. Fetch data from redux state using useEffect hook
-
 	useEffect(() => {
-		dispatch(burgerList);
+		dispatch(listOfBurgers());
 	}, [dispatch]);
 
 	// const [burgers, setBurgers] = useState([]);

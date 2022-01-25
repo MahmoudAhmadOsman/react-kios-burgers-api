@@ -29,7 +29,3 @@ export const burgerListReducer = (
 			return state;
 	}
 };
-
-//1. Burger reducer details
-
-//export this function to combibed reducers in store.js

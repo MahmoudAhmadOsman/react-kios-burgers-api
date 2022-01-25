@@ -20,24 +20,6 @@ function HomeScreen() {
 		dispatch(listOfBurgers());
 	}, [dispatch]);
 
-	// const [burgers, setBurgers] = useState([]);
-	// const [loading, setLoading] = useState(false);
-	// const [error, setError] = useState(false);
-
-	// useEffect(() => {
-	// 	const fecthData = async () => {
-	// 		try {
-	// 			setLoading(true);
-	// 			const { data } = await axios.get("/api/burgers");
-	// 			setLoading(false);
-	// 			setBurgers(data);
-	// 		} catch (error) {
-	// 			setError(error.message);
-	// 			setLoading(false);
-	// 		}
-	// 	};
-	// 	fecthData();
-	// }, []);
 	return (
 		<section className="home_screen">
 			{loading ? (

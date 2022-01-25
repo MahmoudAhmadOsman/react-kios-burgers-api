@@ -5,10 +5,11 @@ import {
 	BURGER_LIST_SUCCESS,
 } from "../constants/burgerConstants";
 
-export const listOfBurgers = () => async (dispatch) => {
-	
+export const listBurgers = () => async (dispatch) => {
 	//1. dispatch the burgers's list action
-	dispatch({ type: BURGER_LIST_REQUEST });
+	dispatch({
+		type: BURGER_LIST_REQUEST,
+	});
 	try {
 		//if request is successful, make a call to the backend api
 		const { data } = await Axios.get("/api/burgers");

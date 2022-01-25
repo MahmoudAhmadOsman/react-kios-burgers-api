@@ -14,7 +14,6 @@ function App() {
 					<Switch>
 						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/signin" component={LoginScreen}></Route>
-
 						<Route path="/" component={HomeScreen} exact={true}></Route>
 					</Switch>
 				</div>

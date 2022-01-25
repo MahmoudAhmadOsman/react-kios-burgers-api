@@ -19,7 +19,6 @@ app.get("/", (req, res) => {
 	res.send("Server is running");
 });
 
-
 app.get("/api/burgers", (req, res) => {
 	res.send(data.burgers);
 });

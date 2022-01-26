@@ -48,11 +48,19 @@ const Navigation = () => {
 						</ul>
 
 						<div class="d-flex">
-							<Link to="/signin" className="btn btn-outline-info me-2">
-								Sign In
+							<Link
+								to="/signin"
+								className="btn btn-outline-info me-2"
+								title="Login"
+							>
+								<i class="fa fa-user" aria-hidden="true"></i>
 							</Link>
-							<Link to="/signin" className="btn btn-outline-primary me-2">
-								Register
+							<Link
+								to="/signin"
+								className="btn btn-outline-primary me-2"
+								title="Register"
+							>
+								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</Link>
 							<Link to="/signin" className="btn btn-outline-success">
 								<i class="fa fa-cart-plus" aria-hidden="true"></i>

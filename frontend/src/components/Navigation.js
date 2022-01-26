@@ -47,20 +47,17 @@ const Navigation = () => {
 							</li>
 						</ul>
 
-						<ul class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
-								Cart
+						<div class="d-flex">
+							<Link to="/signin" className="btn btn-outline-info me-2">
+								Sign In
 							</Link>
-							<Link
-								class="me-3 py-2 text-white text-decoration-none"
-								to="/signin"
-							>
-								Sign in
+							<Link to="/signin" className="btn btn-outline-primary me-2">
+								Register
 							</Link>
-							<Link class="me-3 py-2 text-white text-decoration-none" to="#">
-								Sign up
+							<Link to="/signin" className="btn btn-outline-success">
+								<i class="fa fa-cart-plus" aria-hidden="true"></i>
 							</Link>
-						</ul>
+						</div>
 					</div>
 				</div>
 			</nav>

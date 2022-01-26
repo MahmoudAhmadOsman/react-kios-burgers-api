@@ -27,9 +27,11 @@ const About = () => {
 								</p>
 							</div>
 							<ul className="list-group list-group-flush">
-								<li className="list-group-item">An item</li>
-								<li className="list-group-item">A second item</li>
-								<li className="list-group-item">A third item</li>
+								<li className="list-group-item">Bacholer Degree</li>
+								<li className="list-group-item">Associate Degree</li>
+								<li className="list-group-item">
+									Certs: PHP, Web Design & Development
+								</li>
 							</ul>
 							<div className="card-body">
 								<Link to="https://www.mahmoudosman.com" className="card-link">

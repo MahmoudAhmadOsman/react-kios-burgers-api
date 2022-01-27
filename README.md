@@ -9,7 +9,7 @@ Built with React js, Express js, Mongoose, Redux MongoDB & Bootstrap 5.
 - MongoDB
 - Mongoose
 - Redux
-- Boostrap 5
+- Bootstrap 5
 
 ### My Website
 

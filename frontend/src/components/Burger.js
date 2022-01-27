@@ -30,10 +30,8 @@ const Burger = (props) => {
 												{burger.name} |{" "}
 												<b>
 													{" "}
-													{burger._id.substring(2, 3) +
+													{burger._id.substring(0, 0) +
 														burger.name.substring(0, 1) +
-														" " +
-														burger._id +
 														1}
 												</b>
 											</h5>

@@ -1,7 +1,6 @@
 const data = {
 	burgers: [
 		{
-			_id: "1",
 			name: "Terbinafine",
 			price: 5.83,
 			description: "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
@@ -13,7 +12,6 @@ const data = {
 			carbs: 36,
 		},
 		{
-			_id: "2",
 			name: "Triclosan",
 			price: 13.64,
 			description:
@@ -26,7 +24,6 @@ const data = {
 			carbs: 46,
 		},
 		{
-			_id: "3",
 			name: "Amlodipine",
 			price: 9.41,
 			description:
@@ -39,7 +36,6 @@ const data = {
 			carbs: 47,
 		},
 		{
-			_id: "4",
 			name: "Glyburide",
 			price: 13.6,
 			description:
@@ -52,7 +48,6 @@ const data = {
 			carbs: 49,
 		},
 		{
-			_id: "5",
 			name: "Tapentadol",
 			price: 9.25,
 			description:
@@ -65,7 +60,6 @@ const data = {
 			carbs: 49,
 		},
 		{
-			_id: "6",
 			name: "Nafcillin",
 			price: 6.99,
 			description:
@@ -78,7 +72,6 @@ const data = {
 			carbs: 22,
 		},
 		{
-			_id: "7",
 			name: "Isopropyl",
 			price: 13.19,
 			description:
@@ -91,7 +84,6 @@ const data = {
 			carbs: 26,
 		},
 		{
-			_id: "8",
 			name: "GLYCERIN",
 			price: 7.63,
 			description:
@@ -104,7 +96,6 @@ const data = {
 			carbs: 50,
 		},
 		{
-			_id: "9",
 			name: "Carvedilol",
 			price: 13.22,
 			description:
@@ -117,7 +108,6 @@ const data = {
 			carbs: 23,
 		},
 		{
-			_id: "10",
 			name: "Zincum",
 			price: 6.71,
 			description:

@@ -1,6 +1,9 @@
 import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { burgerListReducer } from "./reducers/burgerReducers";
+import {
+	burgerDetailsReducer,
+	burgerListReducer,
+} from "./reducers/burgerReducers";
 // import data from "./data";
 
 //InitialState
@@ -11,6 +14,7 @@ const InitialState = {};
 // };
 const reducer = combineReducers({
 	burgerList: burgerListReducer,
+	burgerDetails: burgerDetailsReducer,
 });
 
 //Middleware

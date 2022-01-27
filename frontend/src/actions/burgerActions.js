@@ -30,7 +30,6 @@ export const listOfBurgers = () => async (dispatch) => {
 };
 
 //Burger Details action
-
 export const detailsBurger = (burgerId) => async (dispatch) => {
 	dispatch({
 		type: BURGER_DETAILS_REQUEST,

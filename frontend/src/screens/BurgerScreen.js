@@ -9,22 +9,15 @@ import { detailsBurger } from "../actions/burgerActions";
 const BurgerScreen = (props) => {
 	const dispatch = useDispatch();
 	// const burger = data.burgers.find((x) => x._id === props.match.params.id); // display data from data.js file in frontend
+	//1. get burger by id
 	const burgerId = props.match.params.id;
-	//1. Get burger details from store.js reducer function
+	//2. Get burger details from store.js reducer function
 	const burgerDetails = useSelector((state) => state.burgerDetails);
 
-	//2. get or extract loading, burger & error from redux store
+	//3. get or extract loading, burger & error from detailsBurger action or function
 	const { loading, error, burger } = burgerDetails;
 
-	// if (!burger) {
-	// 	return (
-	// 		<div className="ui container">
-	// 			<h1>Burder is not found!</h1>
-	// 		</div>
-	// 	);
-	// }
-
-	//3. dispatch the action now
+	//4. dispatch the action now
 	useEffect(() => {
 		dispatch(detailsBurger(burgerId));
 	}, [dispatch, burgerId]);
@@ -81,7 +74,6 @@ const BurgerScreen = (props) => {
 													{burger._id.substring(0, 0) +
 														burger.name.substring(0, 1) +
 														" " +
-													
 														1}
 												</td>
 												<td>{burger.calories}</td>

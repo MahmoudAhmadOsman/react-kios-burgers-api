@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const Navigation = () => {
+const Navigation = (props) => {
 	return (
 		<section className="main-navigation">
 			<nav className="navbar navbar-expand-md navbar-dark  bg-dark">
@@ -9,7 +9,7 @@ const Navigation = () => {
 							className="logo img-fluid"
 							src="/assets/images/favicon.ico"
 							alt="logo"
-							style={{ height: "40px" }}
+							style={{ height: "35px" }}
 						/>
 					</Link>
 					<button
@@ -63,7 +63,7 @@ const Navigation = () => {
 								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</Link>
 							<Link to="/signin" className="btn btn-outline-success">
-								<i class="fa fa-cart-plus" aria-hidden="true"></i>
+								<i class="fa fa-cart-plus " aria-hidden="true"></i>
 							</Link>
 						</div>
 					</div>

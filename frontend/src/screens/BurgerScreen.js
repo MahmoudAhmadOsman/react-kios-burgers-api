@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Zoom from "react-reveal";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +22,14 @@ const BurgerScreen = (props) => {
 		dispatch(detailsBurger(burgerId));
 	}, [dispatch, burgerId]);
 
+	//Set qty
+	const [qty, stQty] = useState(1);
+
+	// Add to cart
+	const addToCartHandler = () => {
+		// alert("Add to cart is clicked")
+		props.history.push(`/card/${burgerId}/qty=${qty}`);
+	};
 	return (
 		<section className="burger-details">
 			<div className="container">
@@ -41,7 +49,7 @@ const BurgerScreen = (props) => {
 								<br />
 							</Zoom>
 							<hr />
-							<div className="col-md-6">
+							<div className="col-md-4">
 								<img
 									className="img-fluid"
 									src={burger.meal_img}
@@ -55,14 +63,25 @@ const BurgerScreen = (props) => {
 									</Zoom>
 								</div>
 							</div>
-							<div className="col-md-6">
+							<div className="col-md-3">
+								<h1 className="text-danger">Price: &nbsp;${burger.price}</h1>
+								<p>
+									<b>Quantity:</b>
+								</p>
+								<select name="" id="" className="form-control">
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+								</select>
+							</div>
+							<div className="col-md-5">
 								<h1>{burger.name}</h1>
 
 								<div className="table-responsive">
 									<table class="table table-bordered">
 										<thead>
 											<tr>
-												<th>Name/Code</th>
+												<th>Code</th>
 												<th>Calories </th>
 												<th>Fiber </th>
 												<th>Proteim </th>
@@ -72,7 +91,6 @@ const BurgerScreen = (props) => {
 										<tbody>
 											<tr>
 												<td>
-													{burger.name} |{" "}
 													{burger._id.substring(0, 0) +
 														burger.name.substring(0, 1) +
 														" " +
@@ -87,9 +105,12 @@ const BurgerScreen = (props) => {
 									</table>
 								</div>
 
-								<div className="btn btn-success font-weight-bold btn-lg mt-5">
+								<button
+									onClick={addToCartHandler}
+									className="btn btn-success font-weight-bold btn-lg mt-5"
+								>
 									<Zoom right> ADD TO CART</Zoom>
-								</div>
+								</button>
 							</div>
 						</div>
 					</>

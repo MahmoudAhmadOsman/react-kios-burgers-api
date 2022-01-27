@@ -19,6 +19,9 @@ body {
 	--mealHeaderSize: 60px;
 	--meals-desc-title-width: 180px;
 }
+.app {
+	margin-bottom: 20%;
+}
 
 .main-navigation {
 	position: relative;
@@ -130,11 +133,13 @@ body {
 /* Start of footer style */
 .footer {
 	width: 100%;
-	height: 50px;
-	padding: 20px 0px;
-	margin-top: 100%;
-	background-color: #852cf6;
+	height: 30px;
+	height: auto;
+	background-color: #5d5d5d;
 	color: #fff;
 	text-align: center;
+	bottom: 0;
+	position: fixed;
+	font-size: 11px;
 }
 /* End of footer style */

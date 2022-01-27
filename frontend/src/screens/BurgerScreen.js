@@ -35,16 +35,18 @@ const BurgerScreen = (props) => {
 							<Link to="/">
 								<i className="fa fa-chevron-circle-left"></i> Back
 							</Link>
+
 							<Zoom left>
 								<h1 className="text-danger"> Burger Details</h1>
 								<br />
 							</Zoom>
 							<hr />
-							<div className="col-md-4">
+							<div className="col-md-6">
 								<img
 									className="img-fluid"
 									src={burger.meal_img}
 									alt={burger.name}
+									onClick={() => this.openModal(burger)}
 								/>
 								<div className="description mt-3">
 									<h2>Description:</h2>
@@ -53,7 +55,7 @@ const BurgerScreen = (props) => {
 									</Zoom>
 								</div>
 							</div>
-							<div className="col-md-8">
+							<div className="col-md-6">
 								<h1>{burger.name}</h1>
 
 								<div className="table-responsive">

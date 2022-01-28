@@ -23,7 +23,8 @@ const BurgerScreen = (props) => {
 	}, [dispatch, burgerId]);
 
 	//Set qty
-	const [qty, stQty] = useState(1);
+
+	const [qty, setQty] = useState(1);
 
 	// Add to cart
 	const addToCartHandler = () => {
@@ -39,7 +40,7 @@ const BurgerScreen = (props) => {
 					<ErrorMessage>{error}</ErrorMessage>
 				) : (
 					<>
-						<div className="row">
+						<div className="row ">
 							<Link to="/">
 								<i className="fa fa-chevron-circle-left"></i> Back
 							</Link>
@@ -49,12 +50,11 @@ const BurgerScreen = (props) => {
 								<br />
 							</Zoom>
 							<hr />
-							<div className="col-md-4">
+							<div className="col-md-4 border ">
 								<img
 									className="img-fluid"
 									src={burger.meal_img}
 									alt={burger.name}
-									onClick={() => this.openModal(burger)}
 								/>
 								<div className="description mt-3">
 									<h2>Description:</h2>
@@ -63,18 +63,33 @@ const BurgerScreen = (props) => {
 									</Zoom>
 								</div>
 							</div>
-							<div className="col-md-3">
-								<h1 className="text-danger">Price: &nbsp;${burger.price}</h1>
-								<p>
-									<b>Quantity:</b>
-								</p>
-								<select name="" id="" className="form-control">
-									<option value="">1</option>
-									<option value="">2</option>
-									<option value="">3</option>
-								</select>
+							<div className="col-md-4 border ">
+								<h1 className="text-danger ">Price: &nbsp;${burger.price}</h1>{" "}
+								<br />
+								<div className="d-flex">
+									<h4>Quantity:</h4> &nbsp;&nbsp;
+									{burger.protein > 10 && (
+										<select
+											className="form-control w-25"
+											value={qty}
+											onChange={(e) => setQty(e.target.value)}
+										>
+											{[...Array(burger.protein).keys()].map((x) => (
+												<option key={x + 1} value={x + 1}>
+													{x + 1}
+												</option>
+											))}
+										</select>
+									)}
+								</div>
+								<button
+									onClick={addToCartHandler}
+									className="btn btn-success btn-lg mt-5"
+								>
+									<Zoom right> ADD TO CART</Zoom>
+								</button>
 							</div>
-							<div className="col-md-5">
+							<div className="col-md-4 border ">
 								<h1>{burger.name}</h1>
 
 								<div className="table-responsive">
@@ -104,13 +119,6 @@ const BurgerScreen = (props) => {
 										</tbody>
 									</table>
 								</div>
-
-								<button
-									onClick={addToCartHandler}
-									className="btn btn-success font-weight-bold btn-lg mt-5"
-								>
-									<Zoom right> ADD TO CART</Zoom>
-								</button>
 							</div>
 						</div>
 					</>

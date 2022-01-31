@@ -56,20 +56,19 @@ const Navigation = () => {
 								className="btn btn-outline-info me-2"
 								title="Register"
 							>
-								<i class="fa fa-user" aria-hidden="true"></i>
+								<i className="fa fa-user" aria-hidden="true"></i>
 							</Link>
 							<Link
 								to="/signin"
 								className="btn btn-outline-primary me-2"
 								title="login"
 							>
-								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+								<i className="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</Link>
 							<Link to="/cart" className="btn btn-outline-success">
-								<i class="fa fa-cart-plus " aria-hidden="true"></i>
+								<i className="fa fa-cart-plus " aria-hidden="true"></i>
 								{cartItems.length > 0 && (
 									<span class="badge rounded-pill bg-danger">
-										{" "}
 										{cartItems.length}
 									</span>
 								)}

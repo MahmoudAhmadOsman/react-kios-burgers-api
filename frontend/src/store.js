@@ -15,7 +15,7 @@ const InitialState = {};
 // };
 const reducer = combineReducers({
 	burgerList: burgerListReducer,
-	burgerDetails: burgerDetailsReducer, //Burger details
+	burgerDetails: burgerDetailsReducer, //Burger details reducer
 	cart: cartReducer,
 });
 

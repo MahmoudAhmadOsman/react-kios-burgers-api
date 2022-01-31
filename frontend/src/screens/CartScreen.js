@@ -48,14 +48,14 @@ function CartScreen(props) {
 										<div className="col-12">
 											<div
 												className="card card-registration card-registration-2"
-												style={{ borderRadius: "15px" }}
+												style={{ borderRadius: "25px" }}
 											>
 												<div className="card-body p-0">
 													<div className="row g-0">
 														<div className="col-lg-8">
 															<div className="p-5">
 																<div className="d-flex justify-content-between align-items-center mb-5">
-																	<h1 className="fw-bold mb-0 text-black">
+																	<h1 className="fw-bold mb-0 text-success">
 																		Shopping Cart
 																	</h1>
 																	<h6 className="mb-0 text-muted">
@@ -67,12 +67,12 @@ function CartScreen(props) {
 																	<div className="col-md-2 col-lg-2 col-xl-2">
 																		<img
 																			src={item.meal_img}
-																			className="img-fluid rounded-3"
+																			className="img-fluid rounded-2"
 																			alt={item.name}
 																		/>
 																	</div>
 																	<div className="col-md-3 col-lg-3 col-xl-3">
-																		<h6 className="text-muted">{item.name}</h6>
+																		<h3 className="text-muted">{item.name}</h3>
 																		<p className="text-black mb-0">
 																			{item.description.substring(0, 80) +
 																				"..."}
@@ -123,7 +123,7 @@ function CartScreen(props) {
 														</div>
 														<div className="col-lg-4 bg-grey">
 															<div className="p-5">
-																<h3 className="fw-bold mb-5 mt-2 pt-1">
+																<h3 className="text-danger fw-bold mb-5 mt-2 pt-1">
 																	Summary
 																</h3>
 																<hr className="my-4" />

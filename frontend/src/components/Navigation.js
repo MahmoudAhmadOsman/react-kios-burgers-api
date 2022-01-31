@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-const Navigation = (props) => {
+const Navigation = () => {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
 	return (

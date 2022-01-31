@@ -4,6 +4,7 @@ import {
 	burgerDetailsReducer,
 	burgerListReducer,
 } from "./reducers/burgerReducers";
+import { cartReducer } from "./reducers/cartReducers";
 // import data from "./data";
 
 //InitialState
@@ -15,6 +16,7 @@ const InitialState = {};
 const reducer = combineReducers({
 	burgerList: burgerListReducer,
 	burgerDetails: burgerDetailsReducer, //Burger details
+	cart: cartReducer,
 });
 
 //Middleware

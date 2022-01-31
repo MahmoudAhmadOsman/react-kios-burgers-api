@@ -7,8 +7,8 @@ import Loading from "../components/Loading";
 import { detailsBurger } from "../actions/burgerActions";
 // import data from "../data";
 const BurgerScreen = (props) => {
+	//0.
 	const dispatch = useDispatch();
-	// const burger = data.burgers.find((x) => x._id === props.match.params.id); // display data from data.js file in frontend
 	//1. get burger by id
 	const burgerId = props.match.params.id;
 	//2. Get burger details from store.js reducer function
@@ -28,8 +28,7 @@ const BurgerScreen = (props) => {
 
 	// Add to cart
 	const addToCartHandler = () => {
-		// alert("Add to cart is clicked")
-		props.history.push(`/card/${burgerId}/qty=${qty}`);
+		props.history.push(`/cart/${burgerId}?qty=${qty}`);
 	};
 	return (
 		<section className="burger-details">
@@ -68,13 +67,13 @@ const BurgerScreen = (props) => {
 								<br />
 								<div className="d-flex">
 									<h4>Quantity:</h4> &nbsp;&nbsp;
-									{burger.protein > 10 && (
+									{burger.quantity > 0 && (
 										<select
 											className="form-control w-25"
 											value={qty}
 											onChange={(e) => setQty(e.target.value)}
 										>
-											{[...Array(burger.protein).keys()].map((x) => (
+											{[...Array(burger.quantity).keys()].map((x) => (
 												<option key={x + 1} value={x + 1}>
 													{x + 1}
 												</option>

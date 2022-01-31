@@ -5,6 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import Footer from "./components/Footer";
 import BurgerScreen from "./screens/BurgerScreen";
 import About from "./components/About";
+import CartScreen from "./screens/CartScreen";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Navigation />
 				<div className="home_container">
 					<Switch>
+						<Route path="/cart/:id?" component={CartScreen}></Route>
 						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/signin" component={LoginScreen}></Route>
 						<Route path="/about" component={About}></Route>

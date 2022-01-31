@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Navigation = (props) => {
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
 	return (
 		<section className="main-navigation">
 			<nav className="navbar navbar-expand-md navbar-dark  bg-dark">
@@ -49,21 +52,27 @@ const Navigation = (props) => {
 
 						<div class="d-flex">
 							<Link
-								to="/signin"
+								to="/register"
 								className="btn btn-outline-info me-2"
-								title="Login"
+								title="Register"
 							>
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</Link>
 							<Link
 								to="/signin"
 								className="btn btn-outline-primary me-2"
-								title="Register"
+								title="login"
 							>
 								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 							</Link>
-							<Link to="/signin" className="btn btn-outline-success">
+							<Link to="/cart" className="btn btn-outline-success">
 								<i class="fa fa-cart-plus " aria-hidden="true"></i>
+								{cartItems.length > 0 && (
+									<span class="badge rounded-pill bg-danger">
+										{" "}
+										{cartItems.length}
+									</span>
+								)}
 							</Link>
 						</div>
 					</div>

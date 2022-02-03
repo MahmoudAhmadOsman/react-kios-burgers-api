@@ -20,7 +20,7 @@ burgersRouter.get(
 burgersRouter.get(
 	"/seed",
 	expressAsyncHandler(async (req, res) => {
-		//await Burger.remove({}); // remove product in the database in order to create new products
+		//await Burger.remove({}); // remove burgers in the database & create new burgers
 		const createdBurgers = await Burger.insertMany(data.burgers);
 		res.send({ createdBurgers });
 	})

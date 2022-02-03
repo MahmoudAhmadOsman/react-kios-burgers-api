@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Navigation = () => {
+	
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
+
 	return (
 		<section className="main-navigation">
 			<nav className="navbar navbar-expand-md navbar-dark  bg-dark">
@@ -49,7 +51,6 @@ const Navigation = () => {
 								</Link>
 							</li>
 						</ul>
-
 						<div class="d-flex">
 							<Link
 								to="/register"
@@ -80,5 +81,4 @@ const Navigation = () => {
 		</section>
 	);
 };
-
 export default Navigation;

@@ -40,10 +40,6 @@ const BurgerScreen = (props) => {
 				) : (
 					<>
 						<div className="row ">
-							<Link to="/">
-								<i className="fa fa-chevron-circle-left"></i> Back
-							</Link>
-
 							<Zoom left>
 								<h1 className="text-danger"> Burger Details</h1>
 								<br />
@@ -119,6 +115,10 @@ const BurgerScreen = (props) => {
 									</table>
 								</div>
 							</div>
+							<Link to="/" className="mt-4">
+								<i className="fas fa-long-arrow-alt-left me-2" />
+								Back to shop
+							</Link>
 						</div>
 					</>
 				)}

@@ -22,138 +22,91 @@ dispatch(addToCart(burgerId, qty)); // define dispatch first
 }
 }, [dispatch, burgerId, qty]);
 return (
-<section className="cart-screen">
-<div className="container mt-4">
-{cartItems.length === 0 ? (
-<ErrorMessage>
-Your Cart is empty.
-<Link to="/"> Continue Shopping...</Link>
-</ErrorMessage>
-) : (
-<div>
-{cartItems.map((item) => (
-<div
-className="container h-100 h-custom"
-style={{ backgroundColor: "#d2c9ff" }}
->
-<div className="row py-5 h-100">
-<div className="row d-flex justify-content-center align-items-center h-100">
-	<div className="col-12">
-		<div
-			className="card card-registration card-registration-2"
-			style={{ borderRadius: "25px" }}
-		>
-			<div className="card-body p-0">
-				<div className="row g-0">
-					<div className="col-lg-8">
-						<div className="p-5">
-							<div className="d-flex justify-content-between align-items-center mb-5">
-								<h1 className="fw-bold mb-0 text-success">
-									Shopping Cart
-								</h1>
-								<h6 className="mb-0 text-muted">
-									{cartItems.length}
-								</h6>
+	<section className="cart-items">
+		<div className="container mt-3">
+			<div className="shopping-bag">
+				<h1 className="text-danger">Shopping Cart</h1>
+
+				<hr />
+			</div>
+			{cartItems.length === 0 ? (
+				<ErrorMessage>
+					Your Cart is empty.
+					<Link to="/"> Continue Shopping...</Link>
+				</ErrorMessage>
+			) : (
+				<div>
+					{cartItems.map((item) => (
+						<div className="row">
+							<div className="col-md-3" key={item.burger}>
+								<img
+									src={item.meal_img}
+									alt={item.name}
+									className="img-fluid mb-2"
+								/>
 							</div>
-							<hr className="my-4" />
-							<div className="row mb-4 d-flex justify-content-between align-items-center">
-								<div className="col-md-2 col-lg-2 col-xl-2">
-									<img
-										src={item.meal_img}
-										className="img-fluid rounded-2"
-										alt={item.name}
-									/>
-								</div>
-								<div className="col-md-3 col-lg-3 col-xl-3">
-									<h3 className="text-muted">{item.name}</h3>
-									<p className="text-black mb-0">
-										{item.description.substring(0, 80) +
-											"..."}
-									</p>
-								</div>
-								<div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-									<button
-										className="btn btn-link px-2"
-										onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-									>
-										<i className="fas fa-minus" />
-									</button>
-									<input
-										id="form1"
-										min={0}
-										name="quantity"
-										defaultValue={1}
-										type="number"
-										className="form-control form-control-sm"
-									/>
-									<button className="btn btn-link px-2">
-										<i className="fas fa-plus" />
-									</button>
-								</div>
-								<div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-									<h6 className="mb-0">${item.price}</h6>
-								</div>
-								<div className="col-md-1 col-lg-1 col-xl-1 text-end">
-									<Link to="#!" className="text-muted">
-										<i className="fas fa-times" />
-									</Link>
-								</div>
+							<div className="col-md-3">
+								<Link to={`/burger/${item.burger}`}>
+									<h2>{item.name}</h2>
+								</Link>
+								<h3 className="text-muted">${item.price}</h3>
 							</div>
-							<hr className="my-4" />
-							<div className="pt-5">
-								<h6 className="mb-0">
-									<Link
-										to={`/burger/${burgerId}`}
-										className="text-body"
-									>
-										<i className="fas fa-long-arrow-alt-left me-2" />
-										Back to shop
-									</Link>
-								</h6>
+							<div className="col-md-3">
+								<select
+									className="form-control"
+									style={{ width: "60px" }}
+									value={item.qty}
+									onChange={(e) =>
+										dispatch(addToCart(item.burger, Number(e.target.value)))
+									}
+								>
+									{[...Array(item.quantity).keys()].map((x) => (
+										<option key={x + 1} value={x + 1}>
+											{x + 1}
+										</option>
+									))}
+								</select>
+							</div>
+							<div className="col-md-3 mb-4">
+								<button type="button" className="btn btn-outline-danger">
+									<i className="fa fa-trash"></i>
+								</button>
 							</div>
 						</div>
-					</div>
-					<div className="col-lg-4 bg-grey">
-						<div className="p-5">
-							<h3 className="text-danger fw-bold mb-5 mt-2 pt-1">
-								Summary
+					))}
+					<hr />
+					<div className="row">
+						<div className="col-md-8 mt-5">
+							<Link to={`/burger/${burgerId}`} className="text-body">
+								<i className="fas fa-long-arrow-alt-left me-2" />
+								Back to shop
+							</Link>
+						</div>
+						<div className="col-md-4">
+							<h3 className="text-primary">
+								Cart Items: ({cartItems.reduce((a, c) => a + c.qty, 0)} items){" "}
+								<br />
+								<small className="text-muted">
+									Total:{" "}
+									<span className="text-danger">
+										${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+									</span>
+								</small>
 							</h3>
-							<hr className="my-4" />
-							<div className="d-flex justify-content-between mb-4">
-								<h5 className="text-uppercase">
-									{item.name}
-								</h5>
-								<h5 className="text-danger">${item.price}</h5>
-							</div>
-							<hr className="my-4" />
-							<div className="d-flex justify-content-between mb-5">
-								<h5 className="text-uppercase">
-									Total price
-								</h5>
-								<h5>${item.price}</h5>
-							</div>
+
 							<button
 								type="button"
-								className="btn btn-success btn-block btn-lg"
-								data-mdb-ripple-color="success"
+								className="btn btn-outline-success btn-block btn-lg mt-4"
 								disabled={cartItems.length === 0}
 							>
-								PLACE ORDER
+								Proceed to Checkout
 							</button>
 						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</div>
-	</div>
-</div>
-</div>
-</div>
-))}
-</div>
-)}
-</div>
-</section>
+	</section>
 );
 }
 export default CartScreen;

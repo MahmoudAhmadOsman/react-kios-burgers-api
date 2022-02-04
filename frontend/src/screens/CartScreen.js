@@ -42,7 +42,8 @@ return (
 								<img
 									src={item.meal_img}
 									alt={item.name}
-									className="img-fluid mb-2"
+									className="img-fluid rounded-circle mb-2"
+									style={{ width: "200px", height: "200px" }}
 								/>
 							</div>
 							<div className="col-md-3">

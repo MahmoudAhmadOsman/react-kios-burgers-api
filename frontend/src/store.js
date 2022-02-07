@@ -8,7 +8,14 @@ import { cartReducer } from "./reducers/cartReducers";
 // import data from "./data";
 
 //InitialState
-const InitialState = {};
+const InitialState = {
+	//Save cart item in localStorage even after page is refresh
+	cart: {
+		cartItems: localStorage.getItem("cartItems")
+			? JSON.parse(localStorage.getItem("cartItems"))
+			: [],
+	},
+};
 
 // const reducer = (state, actions) => {
 // 	return { burgers: data.burgers };

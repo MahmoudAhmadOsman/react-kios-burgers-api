@@ -9,7 +9,7 @@ import { cartReducer } from "./reducers/cartReducers";
 
 //InitialState
 const InitialState = {
-	//Save cart item in localStorage even after page is refresh
+	//Save cart items in localStorage even after page is refreshed
 	cart: {
 		cartItems: localStorage.getItem("cartItems")
 			? JSON.parse(localStorage.getItem("cartItems"))

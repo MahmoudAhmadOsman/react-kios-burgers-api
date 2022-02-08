@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import BurgerScreen from "./screens/BurgerScreen";
 import About from "./components/About";
 import CartScreen from "./screens/CartScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Switch>
 						<Route path="/cart/:id?" component={CartScreen}></Route>
 						<Route path="/burger/:id" component={BurgerScreen}></Route>
+						<Route path="/payment" component={PaymentScreen}></Route>
 						<Route path="/signin" component={LoginScreen}></Route>
 						<Route path="/about" component={About}></Route>
 						<Route path="/" component={HomeScreen} exact={true}></Route>

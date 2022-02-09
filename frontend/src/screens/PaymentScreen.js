@@ -27,18 +27,17 @@ function PaymentScreen() {
 											/>
 										</div>
 										<div>
-											<p className="dis fw-bold mb-2">Card details</p>
+											<p className="dis fw-bold mb-2">Card Number</p>
 											<div className="d-flex align-items-center justify-content-between card-atm border rounded">
 												<div className="fab fa-cc-visa ps-3  form-control-lg" />{" "}
 												<input
-													type="text"
+													type="number"
 													className="form-control form-control-lg"
-													placeholder="Card Details"
+													placeholder="Enter card number"
 												/>
 												<div className="d-flex w-50">
-													{" "}
 													<input
-														type="text"
+														type="number"
 														className="form-control form-control-lg px-0"
 														placeholder="MM/YY"
 													/>{" "}
@@ -53,49 +52,42 @@ function PaymentScreen() {
 											<div className="my-3 cardname">
 												<p className="dis fw-bold mb-2">Cardholder name</p>{" "}
 												<input
-													className="form-control form-control-lg"
 													type="text"
+													className="form-control form-control-lg"
+													placeholder="Enter your full name"
 												/>
 											</div>
 											<div className="address">
 												<p className="dis fw-bold mb-3">Billing address</p>{" "}
-												<select
-													className="form-select form-control form-control-lg"
-													aria-label="Default select example"
-												>
-													<option selected hidden>
-														State
-													</option>
-													<option value={1}>MN</option>
-													<option value={2}>TX</option>
-													<option value={3}>VT</option>
-												</select>
+												<input
+													type="text"
+													className="form-control form-control-lg mb-2"
+													placeholder="Billing address"
+													name="address"
+												/>
 												<div className="d-flex">
-													{" "}
 													<input
 														className="form-control form-control-lg"
-														type="text"
-														placeholder="Zip Code"
+														type="number"
+														placeholder="Postal Code"
 													/>{" "}
 													<input
-														className="form-control form-control-lg state"
+														className="form-control form-control-lg state "
 														type="text"
 														placeholder="State"
+														maxLength="2"
 													/>{" "}
 												</div>
-								 
 												<div className="d-flex flex-column dis">
-								 
 													<div className="d-flex align-items-center justify-content-between mb-2">
 														<p className="fw-bold">Total</p>
-														<h2 className="fw-bold">
+														<h2 className="fw-bold mt-3">
 															<span className="fas fa-dollar-sign" />
 															35.80
 														</h2>
 													</div>
 													<div className="btn btn-success btn-lg mt-2">
 														PLACE ORDER
-													 
 													</div>
 												</div>
 											</div>

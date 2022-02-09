@@ -83,36 +83,9 @@ function PaymentScreen() {
 														placeholder="State"
 													/>{" "}
 												</div>
-												{/* <div className=" my-3">
-													<p className="dis fw-bold mb-2">VAT Number</p>
-													<div className="inputWithcheck">
-														{" "}
-														<input
-															className="form-control"
-															type="text"
-															defaultValue="GB012345B9"
-														/>{" "}
-														<span className="fas fa-check" />{" "}
-													</div>
-												</div> */}
+								 
 												<div className="d-flex flex-column dis">
-													{/* <div className="d-flex align-items-center justify-content-between mb-2">
-														<p>Subtotal</p>
-														<p>
-															<span className="fas fa-dollar-sign" />
-															33.00
-														</p>
-													</div> 
-													<div className="d-flex align-items-center justify-content-between mb-2">
-														<p>
-															VAT<span>(20%)</span>
-														</p>
-														<p>
-															<span className="fas fa-dollar-sign" />
-															2.80
-														</p>
-													</div>*/}{" "}
-													<br />
+								 
 													<div className="d-flex align-items-center justify-content-between mb-2">
 														<p className="fw-bold">Total</p>
 														<h2 className="fw-bold">
@@ -122,7 +95,7 @@ function PaymentScreen() {
 													</div>
 													<div className="btn btn-success btn-lg mt-2">
 														PLACE ORDER
-														{/* <span className="fas fa-dollar-sign px-1" /> */}
+													 
 													</div>
 												</div>
 											</div>

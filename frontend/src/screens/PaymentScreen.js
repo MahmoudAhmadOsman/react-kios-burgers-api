@@ -1,19 +1,45 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-function PaymentScreen() {
+const PaymentScreen = (props) => {
+	const burgerId = props.match.params.id;
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
+
 	return (
 		<section className="OrderScreen">
 			<div className="container">
 				<h1 className="text-danger">Payment Details</h1> <hr />
 				<div className="row">
-					<div className="col-md-6">left Colum</div>
+					<div className="col-md-6">
+						{cartItems.map((item) => (
+							<div className="row">
+								<div className="col-md-3" key={item.burger}>
+									<img
+										src={item.meal_img}
+										alt={item.name}
+										className="img-fluid rounded-circle mb-2"
+										style={{ width: "100px", height: "100px" }}
+									/>
+								</div>
+								<div className="col-md-3">
+									<h4>{item.name}</h4>
+
+									<h3 className="text-muted">${item.price}</h3>
+								</div>
+								<div className="col-md-3"></div>
+							</div>
+						))}
+						<hr />
+					</div>
 					<div className="col-md-6">
 						<form method="POST">
 							<div className="box-2">
 								<div className="box-inner-2">
 									<div>
-										<h3 className="fw-bold">Payment Details</h3>
-										<p className="dis mb-3">
+										<h3 className="fw-bold text-success">Payment Details</h3>
+										<p className="text-muted mb-3">
 											Complete your purchase by providing your payment details
 										</p>
 									</div>
@@ -78,17 +104,20 @@ function PaymentScreen() {
 														maxLength="2"
 													/>{" "}
 												</div>
-												<div className="d-flex flex-column dis">
+												<div className="d-flex flex-column">
 													<div className="d-flex align-items-center justify-content-between mb-2">
-														<p className="fw-bold">Total</p>
-														<h2 className="fw-bold mt-3">
-															<span className="fas fa-dollar-sign" />
-															35.80
+														<h2 className="fw-bold">Total</h2>
+														<h2 className="fw-bold mt-4 text-danger">
+															<span className="fas fa-dollar-sign " />
+															{cartItems.reduce(
+																(a, c) => a + c.price * c.qty,
+																0
+															)}
 														</h2>
 													</div>
-													<div className="btn btn-success btn-lg mt-2">
+													<button className="btn btn-success btn-lg mt-2 w-25">
 														PLACE ORDER
-													</div>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -101,6 +130,6 @@ function PaymentScreen() {
 			</div>
 		</section>
 	);
-}
+};
 
 export default PaymentScreen;

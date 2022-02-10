@@ -69,7 +69,7 @@ const Navigation = () => {
 							<Link to="/cart" className="btn btn-outline-success">
 								<i className="fa fa-cart-plus " aria-hidden="true"></i>
 								{cartItems.length > 0 && (
-									<span class="badge rounded-pill bg-danger">
+									<span class="badge rounded-pill bg-danger shopping-cart">
 										{cartItems.length}
 									</span>
 								)}

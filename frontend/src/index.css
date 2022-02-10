@@ -63,68 +63,15 @@ body {
 	text-align: center;
 }
 
-/* Start of meals banner */
-.meals_banner {
-	position: relative;
-	margin-top: 60px;
-	margin-bottom: 60px;
+.rounded-pill.shopping-cart{
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 9px;
+	top: -9px;
 }
-/* .meals_banner img{
-    margin-bottom: 20px;
-} */
-.meals_banner h1 {
-	font-size: var(--mealHeaderSize);
-	margin-bottom: 10px;
-	color: var(--mainColor);
-}
-/* End of meals banner */
-
-/* Start of meals-list */
-.meals-list {
-	position: relative;
-}
-
-.meals-list .left-img img {
-	width: 100%;
-	height: 100vh;
-	height: auto;
-}
-.meals-list .card {
-	background-color: #eeeff1;
-	height: 250px;
-	margin-bottom: 10px;
-}
-.meals-list .meals-des {
-	/* width: var(--meals-desc-title-width); */
-	/* background-color: var(--mainColor); */
-	color: var(--mainColor);
-	padding: 8px 0px;
-}
-/* End of meals-list */
-
-/* Start of list of avaialable drinks */
-.drinks-list {
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-.drinks-list h1 {
-	font-size: var(--mealHeaderSize);
-	margin-bottom: 10px;
-	color: var(--mainColor);
-}
-.drinks-list h3.drink-des {
-	width: var(--meals-desc-title-width);
-	background-color: var(--mainColor);
-	color: #fff;
-	padding: 8px 0px;
-}
-/* End of list of avaialable drinks */
-.ui.violet {
-	background-color: var(--mainColor) !important;
-	color: #fff;
-	font-weight: bold;
-}
-
+ 
+ 
 /* product Container */
 .product-container {
 	margin-top: 10px;

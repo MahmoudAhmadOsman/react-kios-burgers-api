@@ -50,6 +50,7 @@ const PaymentScreen = (props) => {
 												className="form-control form-control-lg"
 												type="email"
 												placeholder="Email address"
+												required
 											/>
 										</div>
 										<div>
@@ -60,18 +61,21 @@ const PaymentScreen = (props) => {
 													type="number"
 													className="form-control form-control-lg"
 													placeholder="Enter card number"
+													required
 												/>
 												<div className="d-flex w-50">
 													<input
 														type="number"
 														className="form-control form-control-lg px-0"
 														placeholder="MM/YY"
+														required
 													/>{" "}
 													<input
 														type="password"
 														maxLength={3}
 														className="form-control form-control-lg px-0"
 														placeholder="CVV"
+														required
 													/>{" "}
 												</div>
 											</div>
@@ -81,6 +85,7 @@ const PaymentScreen = (props) => {
 													type="text"
 													className="form-control form-control-lg"
 													placeholder="Enter your full name"
+													required
 												/>
 											</div>
 											<div className="address">
@@ -90,18 +95,21 @@ const PaymentScreen = (props) => {
 													className="form-control form-control-lg mb-2"
 													placeholder="Billing address"
 													name="address"
+													required
 												/>
 												<div className="d-flex">
 													<input
 														className="form-control form-control-lg"
 														type="number"
 														placeholder="Postal Code"
+														required
 													/>{" "}
 													<input
 														className="form-control form-control-lg state "
 														type="text"
 														placeholder="State"
 														maxLength="2"
+														required
 													/>{" "}
 												</div>
 												<div className="d-flex flex-column">

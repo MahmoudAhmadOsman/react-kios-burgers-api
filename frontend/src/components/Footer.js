@@ -7,7 +7,7 @@ const Footer = () => {
 		<div className="footer">
 			<p>
 				&copy; Copyright {currentYear.getFullYear()}. KIOS APP. Alrights
-				reserved.
+				reserved. Build by <i>Mahmoud Osman</i>
 			</p>
 		</div>
 	);

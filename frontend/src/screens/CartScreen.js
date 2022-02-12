@@ -92,7 +92,7 @@ function CartScreen(props) {
 						<hr />
 						<div className="row">
 							<div className="col-md-8 mt-5">
-								<Link to={`/burger/${burgerId}`} className="text-body">
+								<Link to="/" className="text-body">
 									<i className="fas fa-long-arrow-alt-left me-2" />
 									Back to shop
 								</Link>

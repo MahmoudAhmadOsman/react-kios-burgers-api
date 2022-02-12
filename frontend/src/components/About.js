@@ -27,8 +27,10 @@ const About = () => {
 								</p>
 							</div>
 							<ul className="list-group list-group-flush">
-								<li className="list-group-item">Bacholer Degree</li>
-								<li className="list-group-item">Associate Degree</li>
+								<li className="list-group-item">BS - Computer Science </li>
+								<li className="list-group-item">
+									AS - Computer Sytems Management
+								</li>
 								<li className="list-group-item">
 									Certs: PHP, Web Design & Development
 								</li>

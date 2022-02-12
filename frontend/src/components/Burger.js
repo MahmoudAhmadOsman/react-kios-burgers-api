@@ -18,7 +18,7 @@ const Burger = (props) => {
 								<div class="card" key={burger._id}>
 									<Link to={`/burger/${burger._id}`}>
 										<img
-											class="card-img-top"
+											class="card-img-top img-fluid"
 											src={burger.meal_img}
 											alt={burger.name}
 										/>

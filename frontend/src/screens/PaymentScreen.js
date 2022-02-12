@@ -38,7 +38,7 @@ const PaymentScreen = (props) => {
 							<div className="box-2">
 								<div className="box-inner-2">
 									<div>
-										<h3 className="fw-bold text-success">Payment Details</h3>
+										<h3 className="fw-bold text-success"> Order Summary</h3>
 										<p className="text-muted mb-3">
 											Complete your purchase by providing your payment details
 										</p>

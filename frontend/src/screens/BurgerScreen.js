@@ -45,6 +45,7 @@ const BurgerScreen = (props) => {
 								<br />
 							</Zoom>
 							<hr />
+							{/* 	src={`/${burger.meal_img}`}*/}
 							<div className="col-md-4 border ">
 								<img
 									className="img-fluid"

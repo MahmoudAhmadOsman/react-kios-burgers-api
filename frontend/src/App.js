@@ -7,6 +7,7 @@ import BurgerScreen from "./screens/BurgerScreen";
 import About from "./components/About";
 import CartScreen from "./screens/CartScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 						<Route path="/burger/:id" component={BurgerScreen}></Route>
 						<Route path="/payment" component={PaymentScreen}></Route>
 						<Route path="/signin" component={LoginScreen}></Route>
+						<Route path="/register" component={RegisterScreen}></Route>
 						<Route path="/about" component={About}></Route>
 						<Route path="/" component={HomeScreen} exact={true}></Route>
 					</Switch>

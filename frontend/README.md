@@ -1,4 +1,4 @@
-# React Kios Projec
+# React Kios Project
 
 ## Getting Started with Create React App
 
